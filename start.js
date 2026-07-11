@@ -10,7 +10,7 @@ module.exports = {
         path: "app",
         message: "{{platform === 'win32' ? path.join('app', 'tools', 'node-win', 'node.exe') : platform === 'darwin' ? './app/tools/node-mac/bin/node' : './app/tools/node-linux/bin/node'}} scripts/server/serve.cjs",
         on: [{
-          event: "/Frontend\\s*:\\s*(http:\\/\\/\\S+)/",
+          event: "/Frontend.*:.*(http:\\/\\/\\S+)/",
           done: true
         }]
       }
